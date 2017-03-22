@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'DINOT-Black';
+  src: url('#{$icon-font-path}DINOT-Black.eot?#iefix') format('embedded-opentype'),  url('#{$icon-font-path}DINOT-Black.otf')  format('opentype'),
+	     url('#{$icon-font-path}DINOT-Black.woff') format('woff'), url('#{$icon-font-path}DINOT-Black.ttf')  format('truetype'), url('#{$icon-font-path}DINOT-Black.svg#DINOT-Black') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
