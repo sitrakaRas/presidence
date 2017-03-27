@@ -1,0 +1,289 @@
+.top-header{
+	padding-bottom: 20px;
+	img{
+		margin: 0 auto;
+	}
+}
+.navbar{
+	background-color : $vert;
+	margin-bottom: 0;
+	border : none;
+	border-radius : 0;
+	.navbar-collapse{
+		.nav{
+			
+			li{
+				a{
+					color : $blanc;
+					text-transform: uppercase;
+					text-decoration: none;
+					font-family: $simple;
+					padding-top: 6px;
+					padding-bottom: 6px;
+					margin-top: 9px;
+					@include transition(background-color 0.3s ease);
+					font-weight: 600;
+				}
+				&.active,&:hover{
+					a{
+						background-color : $blanc;
+						@include transition(background-color 0.3s ease);
+						color : $gris-txt;
+					}
+				}
+			}
+		}
+	}
+}
+
+.content{
+	.slider-top{
+		margin-bottom: 45px;
+		.item{
+			height: 310px;
+			background-size : cover;
+			background-position : top center;
+			background-repeat: no-repeat;
+			position: relative;
+			.block-txt{
+				position : absolute;
+				bottom : 20px;
+				left : 20px;
+				.titre{
+					text-transform: uppercase;
+					font-size: 24px;
+					color : $blanc;
+					font-family: $gras;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+				}
+				.read-more{
+					font-size: 17px;
+					a{
+						@include the-button();
+					}
+					
+				}
+			}
+		}
+		.slick-prev{
+			left : 15px;
+			z-index: 100;
+			height: auto;
+			&:before{
+				font-size: 40px;
+			}
+		}
+		.slick-next{
+			right : 35px;
+			z-index: 100;
+			height: auto;
+			&:before{
+				font-size: 40px;
+			}
+		}
+		.slick-dots{
+			bottom: -40px;
+			li{
+				button{
+					height: 8px;
+					width: 8px;
+					border-radius : 50%;
+					border : 2px solid $vert;
+					&:before{
+						display: none;
+					}
+				}
+				&.slick-active{
+					button{
+						border : 2px solid $rouge;
+						background-color: $rouge;
+					}
+				}
+			}
+		}
+	}
+}
+
+.featured-article{
+	padding: 20px 0;
+	background-color : $gris;
+	@include clearfix;
+	margin-bottom: 20px;
+	.bloc-article{
+		.titre{
+			a{
+				text-transform: uppercase;
+				font-size: 18px;
+				color : $gris-txt;
+				text-decoration: none;
+			}
+		}
+
+		.illustration{
+			margin-bottom: 15px;
+		}
+
+		.contenu{
+			p{
+				color : $gris-txt;
+				font-size: 12px;
+				text-align: justify;
+			}
+		}
+	}
+}
+
+.newsletter{
+	background-color : #343434;
+	p{
+		color : $blanc;
+		text-transform: uppercase;
+		vertical-align: middle;
+		margin-bottom: 0;
+		padding-left: 20px;
+		i{
+			font-size: 20px;
+			margin-right: 15px;
+		}
+	}
+	.input-group{
+		margin: 10px 15px;
+		.form-control{
+			background-color: transparent;
+			border : 2px solid $blanc;
+			color: $blanc;
+			border-radius : 0;
+
+		}
+		.input-group-addon{
+			background-color: transparent;
+			border : 2px solid $blanc;
+			color: $blanc;
+			border-radius : 0;
+			button{
+				background-color: transparent;
+				border : none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.actualite{
+	padding: 20px;
+	h2{
+		color : $vert;
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+	.bloc-actus{
+		display: inline-block;
+		text-decoration: none;
+		position: relative;
+		padding-bottom: 15px;
+		.img-box{			
+			height: 170px;
+			background-size : cover;
+			background-position: top center;
+			margin-bottom: 15px;
+			.date{
+				display: inline-block;
+				line-height: 35px;
+				height: 35px;
+				background-color : rgba(255,255,255,0.4);
+				position : absolute;
+				right: 0;
+				padding : 0 15px;
+				color: $gris-txt;
+				font-weight: 600;
+			}
+		}
+		p{
+			color: $gris-txt;
+			margin-bottom: 0;
+			font-weight : bold;
+		}
+	}
+
+	.link{
+		margin-top: 20px;
+		.btn-green{
+			@include the-button;
+		}
+	}
+}
+
+.revue-part{
+	background-color : $gris-txt;
+	p{
+		color : $blanc;
+		margin-bottom: 0;
+	}
+	a{
+		display: block;
+		margin: 15px 0;
+		text-align: center;
+		img{
+			max-height: 90px;
+		}
+	}
+}
+
+.institution{
+	background-color : $vert;
+	min-height : 280px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.titre{
+		text-transform: uppercase;
+		color : $blanc;
+		margin-bottom: 15px;
+	}
+	ul{
+		padding-left: 0;
+		list-style: none;
+		a{
+			color: $blanc;
+			text-decoration: underline;
+		}
+	}
+
+	.social{
+		li{
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			a{
+				i{
+					background-color:$blanc;
+					color : $vert;
+					height: 30px;
+					width: 30px;
+					border-radius : 50%;
+					line-height: 30px;
+					@include transition(all 0.1s ease);
+				}
+				&:hover{
+					i{
+						background-color: transparent;
+						color : $blanc;
+						@include transition(all 0.1s ease);
+					}
+					
+				}
+			}
+			
+		}
+	}
+}
+
+.copyright{
+	background-color : $rouge;
+	height: 70px;
+	line-height: 70px;
+	p{
+		color: $blanc;
+		margin-bottom: 0;
+
+	}
+}

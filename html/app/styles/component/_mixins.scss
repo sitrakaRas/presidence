@@ -1,0 +1,33 @@
+@mixin the-button{
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	background-color : $vert;
+	color : $blanc;
+	padding : 0 15px;
+	text-decoration: none;
+	@include transition(all 0.3s ease);
+	border-radius : 3px;
+	font-weight: 600;
+	&:after{
+		vertical-align: middle;
+		display: inline-block;
+		content: "";
+		width: 0; 
+		height: 0; 
+		border-top: 7px solid transparent;
+		border-bottom: 7px solid transparent;
+		border-left: 7px solid $blanc;
+		margin-left: 10px;
+		margin-top: -2px;
+	}
+	&:hover{
+		border : 1px solid $vert;
+		background-color : $blanc;
+		color : $vert;
+		@include transition(all 0.3s ease);
+		&:after{
+			border-left: 7px solid $vert;
+		}
+	}
+}

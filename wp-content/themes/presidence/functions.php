@@ -24,7 +24,7 @@ if (!function_exists('after_setup_theme')) {
       'primary' => 'Menu principale',
     ));
 
-    add_image_size('thumbnail', 300, 300, TRUE); // A modifier
-
+    add_image_size('thumbnail', 255, 170, TRUE); // A modifier
+    add_image_size('carre', 300, 300, TRUE); // A modifier
   }
 } // after_setup_theme
