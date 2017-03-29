@@ -1,3 +1,13 @@
+body{
+	font-family: $simple;
+}
+h1,h2,h3,h4,h5{
+	font-family: $gras;
+	font-weight: 400;
+}
+.green-btn{
+	@include the-button;
+}
 .top-header{
 	padding-bottom: 20px;
 	img{
@@ -42,19 +52,26 @@
 		.item{
 			height: 310px;
 			background-size : cover;
-			background-position : top center;
+			background-position : center;
 			background-repeat: no-repeat;
 			position: relative;
+
 			.block-txt{
 				position : absolute;
 				bottom : 20px;
 				left : 20px;
+				width: 50%;
+					@media only screen and (min-width : 1024px){
+						width: 50%;
+					}
 				.titre{
 					text-transform: uppercase;
-					font-size: 24px;
+					font-size: 20px;
 					color : $blanc;
 					font-family: $gras;
 					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+					margin-bottom: 15px;
+					line-height: 1.1;
 				}
 				.read-more{
 					font-size: 17px;
@@ -105,22 +122,34 @@
 }
 
 .featured-article{
-	padding: 20px 0;
-	background-color : $gris;
+	padding: 40px 0 30px;
+	
 	@include clearfix;
 	margin-bottom: 20px;
 	.bloc-article{
+		padding: 25px;
+		background-color : $gris;
 		.titre{
-			a{
-				text-transform: uppercase;
-				font-size: 18px;
-				color : $gris-txt;
-				text-decoration: none;
+			h2{
+				line-height: 15px;
+				height: 42px;
+				overflow: hidden;
+				margin-top: 0;
+				font-family: $gras;
+				margin-bottom: 20px;
+				a{
+					text-transform: uppercase;
+					font-size: 14px;
+					line-height: 1;
+					color : $gris-txt;
+					text-decoration: none;
+				}
 			}
+			
 		}
 
 		.illustration{
-			margin-bottom: 15px;
+			margin-bottom: 25px;
 		}
 
 		.contenu{
@@ -130,11 +159,20 @@
 				text-align: justify;
 			}
 		}
+		.read-more{
+			.green-btn{
+				background-color : $gris-be;
+				font-family: $simple;
+				&:hover{
+					background-color : $blanc;
+				}
+			}
+		}
 	}
 }
 
 .newsletter{
-	background-color : #343434;
+	background-color : $gris-be;
 	p{
 		color : $blanc;
 		text-transform: uppercase;
@@ -190,11 +228,11 @@
 				display: inline-block;
 				line-height: 35px;
 				height: 35px;
-				background-color : rgba(255,255,255,0.4);
+				background-color : rgba(236,17,41,0.7);
 				position : absolute;
 				right: 0;
 				padding : 0 15px;
-				color: $gris-txt;
+				color: $blanc;
 				font-weight: 600;
 			}
 		}
@@ -220,7 +258,7 @@
 		margin-bottom: 0;
 	}
 	a{
-		display: block;
+		display: inline-block;
 		margin: 15px 0;
 		text-align: center;
 		img{
@@ -277,6 +315,11 @@
 	}
 }
 
+.menu-top{
+	float : none;
+	display: inline-block;
+}
+
 .copyright{
 	background-color : $rouge;
 	height: 70px;
@@ -285,5 +328,88 @@
 		color: $blanc;
 		margin-bottom: 0;
 
+	}
+}
+
+.listing{
+	.row-list{
+		background-color : $gris;
+		@include clearfix();
+		padding: 10px 15px;
+		margin-bottom: 15px;
+		border-radius : 3px;
+		position: relative;
+		min-height: 75px;
+		.icon-block{
+			float: left;
+			position : absolute;
+		}
+		.titre-block{
+			float: left;
+			width: 80%;
+			padding-left: 50px;
+			p{
+				font-family: $gras;
+				color : $gris-txt;
+			}
+		}
+		.button-block{
+			float: left;
+			width: 20%;
+			text-align: right;
+			a{
+				display: inline-block;
+				height: 26px;
+				line-height: 26px;
+				background-color : $vert;
+				color : $blanc;
+				padding : 0 15px;
+				text-decoration: none;
+				@include transition(all 0.3s ease);
+				border-radius : 3px;
+				font-weight: 600;
+				min-width: 90px;
+				font-size: 10px;
+				text-align: center;
+				&:hover{
+						border : 1px solid $vert;
+						background-color : $blanc;
+						color : $vert;
+						text-decoration: none;
+						@include transition(all 0.3s ease);
+				}
+
+			}
+			.btn-read{
+				margin-bottom: 5px;
+			}
+			.btn-down{
+				a{
+					background-color : $rouge;
+					&:hover{
+						border : 1px solid $rouge;
+						background-color : $blanc;
+						color : $rouge;
+						text-decoration: none;
+						@include transition(all 0.3s ease);
+				}
+				}
+			}
+		}
+
+	}
+}
+
+.ctnr-intro{
+	h1{
+		font-family: $gras;
+		color : $vert;
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+	p{
+		font-family: $simple;
+		font-size: 12px;
+		width : 50%;
 	}
 }
